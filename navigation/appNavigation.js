@@ -1,8 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import Onboarding from '../screens/onboarding'
 import Home from '../screens/home';
+import OnboardingScreen from '../screens/onboarding';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +11,7 @@ const AppNavigation = () => {
             <Stack.Navigator initialRouteName='Onboarding'>
                 <Stack.Screen
                     name="Onboarding"
-                    component={Onboarding}
+                    component={OnboardingScreen}
                     options={{ title: 'Onboarding...', headerShown: false }}
                 />
                 <Stack.Screen name="Home" component={Home} />
