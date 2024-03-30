@@ -1,7 +1,8 @@
-import { View, Text} from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, Text, Dimensions} from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper';
+import LottieView from 'lottie-react-native';
 
+const { width, height } = Dimensions.get('window');
 
 const OnboardingScreen = () => {
   return (
@@ -11,8 +12,8 @@ const OnboardingScreen = () => {
           {
             backgroundColor: '#fff',
             image: (
-              <View>
-                <Text>Hello World</Text>
+              <View className="w-40 h-56">
+                <LottieView style={{width: "300px", height: "400px"}} source={require('../../assets/animations/achieve.json')} autoPlay loop />
               </View>
             ),
             title: 'Onboarding',
